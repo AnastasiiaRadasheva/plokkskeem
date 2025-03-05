@@ -14,7 +14,7 @@ while True:
     if p == 0:
         print(f'vastus on {vastus}')
         break
-V1 4
+#V1 4
 try:
     K = int(input("skok koklet: "))
     M = int(input("skok pomestitsja na skovorodku: "))
@@ -28,7 +28,7 @@ try:
         print(f"na skovorodke ostanetsja {ostanetsja} mesta")
 except:
     print("viga ")
-#V1 4
+#V1 4(2)
 skokmesta = 0
 kokku = 100
 panni_maht= 6 
@@ -59,7 +59,7 @@ for i in range(P):
     arv=float(input("Sisesta arv: "))
     if arv<0: vastus+=arv
 print("Summa on: ",vastus)
-#V1 4. Koostage plokkskeem kotlette praadiva roboti jaoks.
+#V1 4.(3) Koostage plokkskeem kotlette praadiva roboti jaoks.
 kokku=int(input("Kokku kotlete: "))
 panni_maht=int(input("Panni maht: "))
 aeg=1
@@ -78,5 +78,16 @@ for l in range(lahenemine):
     print(f"{l+1}. lahenemine. Praeme teine pool.")
     sleep(aeg)
     print(f"Valmis!")
-    
+
 print("Kõik kotletid on praetud!")
+
+#V4 3 ül
+T = int(input("Sisesta sõprade arv: "))
+loendur = 0
+
+for i in range(T):
+    vanus = int(input(f"Sõbra {i + 1} vanus: "))
+    if vanus > 16:
+        loendur += 1
+
+print(f"Õhtusöögile pääseb {loendur} sõpra.")
