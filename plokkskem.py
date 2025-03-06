@@ -4,16 +4,20 @@ for õ in range(20):
     for e in range(3):
         print(f'{e+1}eksam')
 #V4
-p=int(input('mitu korda kordame?'))
-vastus=0
-while True:
-    arv=float(input('sisesta arv '))
-    if arv<0:
-        vastus+=arv
-    p-=1
-    if p == 0:
-        print(f'vastus on {vastus}')
-        break
+p = int(input('Mitu korda kordame? '))
+vastus = 0
+
+while p > 0:  # Tsükkel kestab seni, kuni p väärtus on suurem kui 0
+    try:
+        arv = float(input('Sisesta arv: '))
+        if arv < 0:
+            vastus += arv  # Lisame ainult negatiivsed arvud
+        p -= 1  # Iga korduse jaoks vähendame p väärtust
+    except ValueError:  # Kui sisend ei ole number
+        print("Palun sisesta kehtiv arv!")
+
+print(f'Vastus on {vastus}')
+
 #V1 4
 try:
     K = int(input("skok koklet: "))
